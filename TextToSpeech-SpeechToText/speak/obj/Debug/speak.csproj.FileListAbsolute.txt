@@ -1,0 +1,9 @@
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\bin\Debug\speak.exe.config
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\bin\Debug\speak.exe
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\bin\Debug\speak.pdb
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.csprojResolveAssemblyReference.cache
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.Form1.resources
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.Properties.Resources.resources
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.csproj.GenerateResource.Cache
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.exe
+C:\Users\gokse\Desktop\PROJECTS\speak\speak\obj\Debug\speak.pdb
