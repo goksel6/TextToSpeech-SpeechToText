@@ -41,10 +41,10 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).BeginInit();
             this.panel1.SuspendLayout();
@@ -185,6 +185,17 @@
             this.panel1.Size = new System.Drawing.Size(394, 450);
             this.panel1.TabIndex = 12;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(190, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 45);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label4);
@@ -203,16 +214,15 @@
             this.panel2.Size = new System.Drawing.Size(486, 450);
             this.panel2.TabIndex = 13;
             // 
-            // button1
+            // label4
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(190, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(13, 375);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 25);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Speed:";
             // 
             // label3
             // 
@@ -223,16 +233,6 @@
             this.label3.Size = new System.Drawing.Size(92, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "Volume:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(13, 375);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 25);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Speed:";
             // 
             // Form1
             // 
@@ -256,24 +256,23 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button buttonKonus;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TrackBar trackBarVolume;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TrackBar trackBarSpeed;
-        private System.Windows.Forms.Button buttonread;
-        private System.Windows.Forms.Button buttonPause;
-        private System.Windows.Forms.Button buttonCont;
-        private System.Windows.Forms.Button buttonRecord;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.Button buttonKonus;
+        public System.Windows.Forms.RichTextBox richTextBox2;
+        public System.Windows.Forms.TrackBar trackBarVolume;
+        public System.Windows.Forms.TrackBar trackBarSpeed;
+        public System.Windows.Forms.Button buttonread;
+        public System.Windows.Forms.Button buttonPause;
+        public System.Windows.Forms.Button buttonCont;
+        public System.Windows.Forms.Button buttonRecord;
+        public System.Windows.Forms.Button buttonClose;
+        public System.Windows.Forms.Button button1;
     }
 }
 

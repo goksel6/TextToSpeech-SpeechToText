@@ -16,33 +16,23 @@ namespace speak
     public partial class Form1 : Form
     {
         SpeechSynthesizer ss;
+        //static SpeechRecognitionEngine engine;
+        SpeechManager speechManager;
+
         public Form1()
         {
             InitializeComponent();
         }
-        Boolean flag=false;
-        static SpeechRecognitionEngine engine;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ss = new SpeechSynthesizer();
+            speechManager = SpeechManager.Instance;
         }
 
-         void engine_SpeechRecognized (object ob, SpeechRecognizedEventArgs e)
-        {
-            richTextBox1.Text= e.Result.Text;   
-        }
         private void buttonKonus_Click(object sender, EventArgs e)
         {
-                flag = true;
-                buttonKonus.Text = "Running";
-                engine = new SpeechRecognitionEngine();
-                engine.SetInputToDefaultAudioDevice();
-                Grammar g = new DictationGrammar();
-                engine.LoadGrammar(g);
-                engine.RecognizeAsync(RecognizeMode.Multiple);
-                engine.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(engine_SpeechRecognized);
-                Console.ReadLine();
-      
+            speechManager.Speak();
         }
 
 
@@ -66,16 +56,7 @@ namespace speak
 
         private void buttonRecord_Click(object sender, EventArgs e)
         {
-            SpeechSynthesizer ss = new SpeechSynthesizer();
-            ss.Rate = trackBarSpeed.Value;
-            ss.Volume = trackBarVolume.Value;
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "WAwe Files| *.wav";
-            sfd.ShowDialog();
-            ss.SetOutputToWaveFile(sfd.FileName);
-            ss.Speak(richTextBox2.Text);
-            ss.SetOutputToDefaultAudioDevice();
-           // richTextBox2.Show("Recording Completed", "T2S");
+            speechManager.Record();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
