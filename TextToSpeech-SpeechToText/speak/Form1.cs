@@ -27,7 +27,7 @@ namespace speak
         private void Form1_Load(object sender, EventArgs e)
         {
             ss = new SpeechSynthesizer();
-            speechManager = SpeechManager.Instance;
+            speechManager = SpeechManager.Instance(this);
         }
 
         private void buttonKonus_Click(object sender, EventArgs e)

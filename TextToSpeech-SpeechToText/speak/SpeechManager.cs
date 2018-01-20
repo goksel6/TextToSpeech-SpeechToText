@@ -13,22 +13,22 @@ namespace speak
     {
         static SpeechRecognitionEngine engine;
         static Form1 form1;
-        private static SpeechManager instance;
+        private static SpeechManager instance=null;
 
         private SpeechManager(Form1 f)
         {
             form1 = f;
         }
-        public static SpeechManager Instance
+
+        public static SpeechManager Instance (Form1 form1)
         {
-            get
-            {
+        
                 if (instance == null)
                 {
                     instance = new SpeechManager(form1);
                 }
                 return instance;
-            }
+                  
         }
         
 
@@ -37,7 +37,7 @@ namespace speak
             form1.richTextBox1.Text = e.Result.Text;
         }
 
-        public void Speak()
+        public  void Speak()
         {
             form1.buttonKonus.Text = "Running";
             engine = new SpeechRecognitionEngine();
